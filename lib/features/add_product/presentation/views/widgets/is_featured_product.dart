@@ -3,9 +3,9 @@ import '../../../../../core/utils/app_text_styles.dart';
 import 'custom_check_box.dart';
 
 class IsFeaturedProduct extends StatefulWidget {
-  const IsFeaturedProduct({super.key, required this.isTermsAccepted});
+  const IsFeaturedProduct({super.key, required this.isFeatured});
 
-  final ValueChanged<bool> isTermsAccepted ;
+  final ValueChanged<bool> isFeatured ;
   @override
   State<IsFeaturedProduct> createState() => _IsFeaturedProductState();
 }
@@ -15,29 +15,23 @@ class _IsFeaturedProductState extends State<IsFeaturedProduct> {
   @override
   Widget build(BuildContext context) {
     return Row(
+
       children: [
         CustomCheckBox(
           isChecked: isAcceptedTerms,
           onChecked: (bool value) {
               setState(() {
                 isAcceptedTerms = value ;
-                widget.isTermsAccepted(value);
+                widget.isFeatured(value);
               });
           },
         ),
-        SizedBox(width: 16,),
+        SizedBox(
+          width:12
+        ),
         SizedBox(
           width: MediaQuery.sizeOf(context).width - 16 * 2 - 48,
-          child: Text.rich(
-            TextSpan(
-              children: [
-                TextSpan(
-                  text: "Is Featured ? ",
-                  style: TextStyles.semiBold13,
-                ),
-              ],
-            ),
-          ),
+          child:Text("Is Featured ? ",style:  TextStyles.semiBold13,)
         ),
       ],
     );
