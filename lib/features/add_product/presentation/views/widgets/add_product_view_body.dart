@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub_dashboard/core/widgets/custom_text_field.dart';
 
+import 'image_filed.dart';
+
 class AddProductViewBody extends StatefulWidget {
   const AddProductViewBody({super.key});
 
@@ -41,6 +43,8 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 maxLines: 5,
                 textInputType: TextInputType.text,
               ),
+              SizedBox(height: 16),
+              ImageField()
             ],
           ),
         ),
