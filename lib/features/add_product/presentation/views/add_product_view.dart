@@ -4,9 +4,14 @@ import 'package:fruit_hub_dashboard/features/add_product/presentation/views/widg
 class AddProductView extends StatelessWidget {
   const AddProductView ({super.key});
 
+  static const String routName = "addProductView";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Add Product") ,
+      ),
       body: AddProductViewBody(),
     );
   }
