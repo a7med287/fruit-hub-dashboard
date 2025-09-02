@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub_dashboard/core/widgets/custom_text_field.dart';
+import 'package:fruit_hub_dashboard/features/add_product/presentation/views/widgets/is_featured_product.dart';
 
 import 'image_filed.dart';
 
@@ -44,7 +45,11 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 textInputType: TextInputType.text,
               ),
               SizedBox(height: 16),
-              ImageField()
+              IsFeaturedProduct(isTermsAccepted: (value) {
+
+              },),
+              SizedBox(height: 16),
+              ImageField(onFileChanged: (image) {  },)
             ],
           ),
         ),

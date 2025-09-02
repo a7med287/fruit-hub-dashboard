@@ -7,8 +7,9 @@ import 'package:image_picker/image_picker.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class ImageField extends StatefulWidget {
-  const ImageField({super.key});
+  const ImageField({super.key, required this.onFileChanged});
 
+  final ValueChanged<File?> onFileChanged;
   @override
   State<ImageField> createState() => _ImageFieldState();
 }
@@ -31,6 +32,7 @@ class _ImageFieldState extends State<ImageField> {
               source: ImageSource.gallery,
             );
             imageFile = File(image!.path);
+            widget.onFileChanged(imageFile);
             debugPrint("image uploaded");
           } catch (e) {
             log("something wrong in photo");
@@ -71,7 +73,9 @@ class _ImageFieldState extends State<ImageField> {
                     onPressed: () {
                       setState(() {
                         imageFile = null;
+                        widget.onFileChanged(imageFile);
                       });
+
                     },
                     icon: Icon(Icons.delete_forever),
                     color: Colors.red,
