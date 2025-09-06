@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_hub_dashboard/core/helper_function/on_generate_routs.dart';
+import 'package:fruit_hub_dashboard/core/services/get_it_service.dart';
 import 'package:fruit_hub_dashboard/core/services/supabase_services.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'core/utils/app_colors.dart';
 import 'features/dashboard/presentation/views/dashboard_view.dart';
 import 'firebase_options.dart';
@@ -16,6 +16,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const FruitHubDashBoard());
+  setupGetIt();
  }
 
 class FruitHubDashBoard extends StatelessWidget{
