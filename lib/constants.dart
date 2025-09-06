@@ -1,0 +1,4 @@
+
+
+const kSupaUrl ="https://tyhdtjecpbnefhhgarnq.supabase.co";
+const kSupaKey ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR5aGR0amVjcGJuZWZoaGdhcm5xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxNTg3MDksImV4cCI6MjA3MjczNDcwOX0.ovI3Zpbp1mVpUh0SZUIKVFN_Qqtkay4S7Ti8SpVOBp8";
